@@ -1,5 +1,7 @@
 const test = require('ava');
 
+const taskFunc = require('./task1');
+
 test('foo', t => {
-	t.pass();
+	t.notThrows(() => {taskFunc, true});
 });
