@@ -2,39 +2,39 @@ const test = require('ava');
 
 const taskFunc = require('./task1');
 
-test('a', t => {
+test('test with the correct short string', t => {
 	t.true(taskFunc('abc'));
 });
 
 
-test('b', t => {
+test('test with null', t => {
 	t.false(taskFunc(null));
 });
 
 
-test('c', t => {
+test('test with undefined', t => {
 	t.false(taskFunc(undefined));
 
 });
 
-test('d', t => {
+test('test with wrong line 1', t => {
 	t.false(taskFunc('abbc'));
 });
 
-test('e', t => {
+test('test with wrong line 2', t => {
 	t.false(taskFunc('aabc'));
 
 });
 
-test('f', t => {
+test('test with wrong line 3', t => {
 	t.false(taskFunc('abcc'));
 
 });
 
-test('g', t => {
+test('test with big false stroke', t => {
 	t.false(taskFunc('abcqwertyc'));
 });
 
-test('h', t => {
+test('test with big correct stroke', t => {
 	t.true(taskFunc('abcrtyui'));
 });
